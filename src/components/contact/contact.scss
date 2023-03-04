@@ -1,0 +1,177 @@
+.contact {
+    width: 100%;
+    padding: 40px;
+    padding-bottom: 60px;
+    display: grid;
+    background: linear-gradient(rgba(20, 12, 36, 0.5), rgba(205, 187, 245, 0.3), rgba(3, 29, 19, 0.5));
+    place-content: center;
+
+
+    .head {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 40px;
+        font-weight: bold;
+        letter-spacing: 1.5px;
+        color: white;
+        text-shadow: 5px 5px 5px #424141;
+    }
+
+    .inner {
+        width: 80%;
+        background-color: white;
+        border-radius: 40px;
+        padding: 40px;
+
+        .left {
+            .h4 {
+                font-weight: bold;
+                font-size: 28px;
+                color: rgb(27, 93, 236);
+            }
+
+            .txt {
+                font-size: 14px;
+                font-weight: 500;
+                letter-spacing: .5px;
+            }
+
+            form {
+
+                width: 85%;
+                margin-top: 40px;
+
+                .form-group {
+                    margin-top: 30px;
+                    position: relative;
+
+                    .err{
+                        color: red;
+                        font-size: 12px;
+                        position: absolute;
+                        left: 0px;
+                    }
+
+                    input {
+                        line-height: 30px;
+                        border-radius: 5px;
+                        background-color: rgb(240, 240, 253, .7);
+                        border-color: rgb(191, 191, 191);
+                        letter-spacing: .4px;
+                    }
+
+                    .textArea {
+                        width: 100%;
+                        height: 200px;
+                        border-radius: 5px;
+                        background-color: rgb(240, 240, 253, .7);
+                        border-color: rgb(191, 191, 191);
+                        padding: 10px;
+                        letter-spacing: .4px;
+                    }
+
+                    .but1 {
+                        text-transform: none;
+                        width: 100%;
+                        line-height: 30px;
+                        color: white;
+                        font-weight: 500 !important;
+                        font-size: 18px;
+                        letter-spacing: 1px;
+                        background-color: rgb(27, 93, 236);
+                    }
+                }
+            }
+
+        }
+
+        .right {
+            display: grid;
+
+            img {
+                width: 100%;
+                height: auto;
+                margin: 0px auto 0px auto;
+            }
+
+            .box {
+                width: 350px;
+                height: 150px;
+                margin: auto;
+
+                td {
+                    min-width: 50px;
+                    font-weight: 500;
+                    font-size: 15px;
+                    color: #442392;
+                }
+
+                .s {
+                    width: 35px;
+                    height: 35px;
+                    display: grid;
+                    place-content: center;
+                    border-radius: 50%;
+                    border: 1px solid #adadad;
+                    color: rgb(27, 93, 236)
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width:600px) {
+    .contact {
+
+        .head{
+            font-size: 30px;
+        }
+    
+        .inner {
+            width: 95vw;
+            margin: auto;
+            padding: 20px;
+
+            .left {
+                text-align: center;
+
+                .h4{
+                    font-size: 25px;
+                }
+                .txt{
+                    font-size: 14px;
+                }
+
+                form {
+                    margin: auto;
+                    width: 100%;
+
+                    .form-group{
+                        input, .textArea{
+                            font-size: 14px;
+                        }
+                        .but{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+
+            .right{
+                display: grid;
+                place-content: center;
+                margin-top: 10px;
+                .box{
+                    margin-top: -20px;
+                    font-size: 14px;
+                    width: 95%;
+
+                    td{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
