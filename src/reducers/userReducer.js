@@ -1,11 +1,21 @@
-import { USER_SUCESS, USER_DELETE } from "../constants/userConstants";
+import {USER_REQUEST, USER_SUCESS, USER_DELETE } from "../constants/userConstants";
 
 const userReducer = (state = { userList: null }, action) => {
     switch (action.type) {
+
+        case USER_REQUEST: {
+            return {
+                ...state,
+                isLoading: true,
+                userList: null
+            }
+        }
+
         case USER_SUCESS:
             return {
                 ...state,
-                userList: action.payload
+                userList: action.payload,
+                isLoading: false
             }
 
         case USER_DELETE:
@@ -14,7 +24,8 @@ const userReducer = (state = { userList: null }, action) => {
             })
             return {
                 ...state,
-                userList: newList
+                userList: newList,
+                isLoading: false
             }
 
         default:

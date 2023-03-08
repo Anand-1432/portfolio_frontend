@@ -4,6 +4,7 @@ import "./chat.scss";
 import ChatBox from './ChatBox';
 
 import SearchIcon from '@mui/icons-material/Search';
+import { Bars } from 'react-loader-spinner'
 import { Button } from '@material-ui/core';
 import DeleteIcon from '@mui/icons-material/Delete';
 import MessageBox from './MessageBox';
@@ -26,7 +27,7 @@ const Chat = () => {
 
 
     const dispatch = useDispatch();
-    const { userList } = useSelector(state => state.userReducer);
+    const { userList, isLoading } = useSelector(state => state.userReducer);
 
 
     useEffect(() => {
@@ -67,7 +68,18 @@ const Chat = () => {
             <div className='chatConatiner'>
 
                 {/* /////////////////////////////////////////////////// */}
+
                 {!codeSate ? <Login fun={setCodeState} /> : null}
+
+                {isLoading ? <div className='chatLoader'> <Bars
+                    height="80"
+                    width="80"
+                    color="#4fa94d"
+                    ariaLabel="bars-loading"
+                    wrapperClass=""
+                    visible={true}
+                /> </div> : null}
+
                 {/* /////////////////////////////////////////////////// */}
 
                 <div className='chat'>

@@ -6,8 +6,8 @@ const Login = (props) => {
 
     const [code, setCode] = useState();
 
-    const checkCode = () =>{
-        if(code=="anand@123"){
+    const checkCode = () => {
+        if (code == "anand@123") {
             props.fun(true);
         }
     }

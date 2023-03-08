@@ -14,7 +14,7 @@ import NavigationIcon from '@mui/icons-material/Navigation';
 
 import resume from '../../pdf/resume.pdf'
 
-const About = () => {
+const About = ({fun}) => {
 
 
     const [state, setState] = useState(false);
@@ -75,7 +75,7 @@ const About = () => {
                             </div>
 
 
-                            <div className='g3'>
+                            <div className='g3' onClick={fun}>
                                 <div id="sg1">
                                     <div id='sg11'>
                                         <div><SchoolIcon /></div>

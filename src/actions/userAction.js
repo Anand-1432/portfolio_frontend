@@ -1,5 +1,5 @@
 import axios from "axios";
-import { USER_SUCESS, USER_DELETE } from "../constants/userConstants";
+import { USER_SUCESS, USER_DELETE, USER_REQUEST } from "../constants/userConstants";
 
 
 export const addUser = (userData) => async (dispatch) => {
@@ -14,6 +14,7 @@ export const addUser = (userData) => async (dispatch) => {
 
 export const getUsers = () => async (dispatch) => {
   try {
+    dispatch({ type: USER_REQUEST });
     const config = { headers: { "Content-Type": "application/json" } };
     const { data } = await axios.get("https://portfolio-90kb.onrender.com/messages", config);
     dispatch({ type: USER_SUCESS, payload: data.data })
